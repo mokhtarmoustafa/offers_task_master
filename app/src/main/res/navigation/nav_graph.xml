@@ -21,10 +21,19 @@
         android:id="@+id/managerOfferFragment"
         android:name="com.mokhtar.offerstask.ui.offer.manager.home.ManagerOfferFragment"
         android:label="Manager - Offers"
-        tools:layout="@layout/manager_offer_fragment" />
+        tools:layout="@layout/manager_offer_fragment" >
+        <action
+            android:id="@+id/action_managerOfferFragment_to_newOfferFragment"
+            app:destination="@id/newOfferFragment" />
+    </fragment>
     <fragment
         android:id="@+id/employeeOfferFragment"
         android:name="com.mokhtar.offerstask.ui.offer.employee.home.EmployeeOfferFragment"
         android:label="Employee - Offers"
         tools:layout="@layout/employee_offer_fragment" />
+    <fragment
+        android:id="@+id/newOfferFragment"
+        android:name="com.mokhtar.offerstask.ui.offer.manager.newoffer.NewOfferFragment"
+        android:label="New Offer"
+        tools:layout="@layout/new_offer_fragment" />
 </navigation>

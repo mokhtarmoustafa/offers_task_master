@@ -6,27 +6,38 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.mokhtar.offerstask.R
+import com.mokhtar.offerstask.databinding.NewOfferFragmentBinding
 
 class NewOfferFragment : Fragment() {
+    //region variables
+    private var _binding: NewOfferFragmentBinding? = null
+    private val binding: NewOfferFragmentBinding get() = _binding!!
+    private lateinit var viewModel: NewOfferViewModel
+    //endregion
 
     companion object {
         fun newInstance() = NewOfferFragment()
     }
 
-    private lateinit var viewModel: NewOfferViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.new_offer_fragment, container, false)
+        _binding = NewOfferFragmentBinding.inflate(layoutInflater, container, false)
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(NewOfferViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.ivBack.setOnClickListener { findNavController().navigateUp() }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
 }

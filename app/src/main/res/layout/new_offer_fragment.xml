@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".ui.offer.manager.newoffer.NewOfferFragment">
 
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintStart_toStartOf="@+id/start"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle" />
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
@@ -14,6 +22,7 @@
         android:textColor="@color/purple_700"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toStartOf="@+id/end"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/start"
@@ -44,7 +53,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/et_offer_title_data"
         app:layout_constraintStart_toStartOf="@+id/start"
         app:layout_constraintTop_toTopOf="@+id/et_offer_title_data"
-        tools:text="Offer Title" />
+        android:text="Offer Title" />
 
     <EditText
         android:id="@+id/et_offer_title_data"
@@ -74,8 +83,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/et_offer_organization_data"
         app:layout_constraintStart_toStartOf="@+id/start"
         app:layout_constraintTop_toTopOf="@+id/et_offer_organization_data"
-        app:layout_constrainttop_toBottomOf="@+id/tv_offer_title"
-        tools:text="Organization:" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_offer_title"
+        android:text="Organization:" />
 
     <EditText
         android:id="@+id/et_offer_organization_data"
@@ -104,8 +113,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/et_offer_rule_data"
         app:layout_constraintStart_toStartOf="@+id/start"
         app:layout_constraintTop_toTopOf="@+id/et_offer_rule_data"
-        app:layout_constrainttop_toBottomOf="@+id/tv_offer_title"
-        tools:text="Rule:" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_offer_title"
+        android:text="Rule:" />
 
     <EditText
         android:id="@+id/et_offer_rule_data"
@@ -135,8 +144,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/et_offer_salary_data"
         app:layout_constraintStart_toStartOf="@+id/start"
         app:layout_constraintTop_toTopOf="@+id/et_offer_salary_data"
-        app:layout_constrainttop_toBottomOf="@+id/tv_offer_title"
-        tools:text="Salary:" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_offer_title"
+        android:text="Salary:" />
 
     <EditText
         android:id="@+id/et_offer_salary_data"
@@ -165,8 +174,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/et_offer_bonus_data"
         app:layout_constraintStart_toStartOf="@+id/start"
         app:layout_constraintTop_toBottomOf="@+id/et_offer_salary_data"
-        app:layout_constrainttop_toBottomOf="@+id/tv_offer_title"
-        tools:text="Bonus:" />
+
+        android:text="Bonus:" />
 
     <EditText
         android:id="@+id/et_offer_bonus_data"
@@ -195,8 +204,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/et_offer_benefit_data"
         app:layout_constraintStart_toStartOf="@+id/start"
         app:layout_constraintTop_toBottomOf="@+id/et_offer_bonus_data"
-        app:layout_constrainttop_toBottomOf="@+id/tv_offer_title"
-        tools:text="Benefit:" />
+
+        android:text="Benefit:" />
 
     <EditText
         android:id="@+id/et_offer_benefit_data"
@@ -208,6 +217,8 @@
         android:imeOptions="actionNext"
         android:textAllCaps="false"
         android:textSize="20sp"
+        android:lines="5"
+        android:scrollbars="vertical"
         app:layout_constraintEnd_toStartOf="@+id/end"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/tv_offer_bonus"
@@ -216,11 +227,12 @@
     <Button
         android:id="@+id/btn_create"
         android:layout_width="0dp"
-        android:layout_margin="20dp"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:text="Create"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/end"
-        app:layout_constraintStart_toStartOf="@+id/start" />
+        app:layout_constraintStart_toStartOf="@+id/start"
+        app:layout_constraintTop_toBottomOf="@+id/et_offer_benefit_data" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
