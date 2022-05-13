@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/FL/OffersTask/app/src/main/res/drawable/ic_new_offer.xml" value="0.196" />
         <entry key="..\:/FL/OffersTask/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/FL/OffersTask/app/src/main/res/layout/fragment_intro.xml" value="0.18802083333333333" />
+        <entry key="..\:/FL/OffersTask/app/src/main/res/layout/manager_offer_fragment.xml" value="0.17395833333333333" />
       </map>
     </option>
   </component>
