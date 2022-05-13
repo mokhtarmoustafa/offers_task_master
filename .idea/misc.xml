@@ -7,8 +7,9 @@
         <entry key="..\:/FL/OffersTask/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/FL/OffersTask/app/src/main/res/layout/employee_offer_fragment.xml" value="0.1" />
         <entry key="..\:/FL/OffersTask/app/src/main/res/layout/fragment_intro.xml" value="0.18802083333333333" />
-        <entry key="..\:/FL/OffersTask/app/src/main/res/layout/manager_offer_fragment.xml" value="0.1875" />
+        <entry key="..\:/FL/OffersTask/app/src/main/res/layout/manager_offer_fragment.xml" value="0.1" />
         <entry key="..\:/FL/OffersTask/app/src/main/res/layout/new_offer_fragment.xml" value="0.5" />
+        <entry key="..\:/FL/OffersTask/app/src/main/res/layout/offer_details_fragment.xml" value="0.18" />
         <entry key="..\:/FL/OffersTask/app/src/main/res/layout/offer_list_item.xml" value="0.1" />
       </map>
     </option>
