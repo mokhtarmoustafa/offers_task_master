@@ -14,15 +14,16 @@
         app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
         app:layout_constraintStart_toStartOf="@+id/start"
         app:layout_constraintTop_toTopOf="@+id/tvTitle" />
+
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="New Offer"
         android:textColor="@color/purple_700"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toStartOf="@+id/end"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/start"
@@ -47,13 +48,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:text="Offer Title"
         android:textAllCaps="false"
         android:textColor="@color/purple_700"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/et_offer_title_data"
         app:layout_constraintStart_toStartOf="@+id/start"
-        app:layout_constraintTop_toTopOf="@+id/et_offer_title_data"
-        android:text="Offer Title" />
+        app:layout_constraintTop_toTopOf="@+id/et_offer_title_data" />
 
     <EditText
         android:id="@+id/et_offer_title_data"
@@ -69,7 +70,9 @@
         app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toEndOf="@+id/tv_offer_title"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
     <requestFocus />
+
 
     <TextView
         android:id="@+id/tv_offer_organization"
@@ -77,14 +80,14 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_marginStart="24dp"
+        android:text="Organization:"
         android:textAllCaps="false"
         android:textColor="@color/purple_700"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/et_offer_organization_data"
         app:layout_constraintStart_toStartOf="@+id/start"
-        app:layout_constraintTop_toTopOf="@+id/et_offer_organization_data"
         app:layout_constraintTop_toBottomOf="@+id/tv_offer_title"
-        android:text="Organization:" />
+        app:layout_constraintTop_toTopOf="@+id/et_offer_organization_data" />
 
     <EditText
         android:id="@+id/et_offer_organization_data"
@@ -102,19 +105,53 @@
         app:layout_constraintTop_toBottomOf="@+id/et_offer_title_data" />
 
     <TextView
+        android:id="@+id/tv_employee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginStart="24dp"
+        android:text="Employee:"
+        android:textAllCaps="false"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/s_employee"
+        app:layout_constraintStart_toStartOf="@+id/start"
+        app:layout_constraintTop_toTopOf="@+id/s_employee" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/s_employee"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/end"
+        app:layout_constraintStart_toEndOf="@+id/tv_employee"
+        app:layout_constraintTop_toBottomOf="@+id/et_offer_organization_data">
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Employee"
+            android:inputType="none"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <TextView
         android:id="@+id/tv_offer_rule"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_marginStart="20dp"
+        android:text="Rule:"
         android:textAllCaps="false"
         android:textColor="@color/purple_700"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/et_offer_rule_data"
         app:layout_constraintStart_toStartOf="@+id/start"
-        app:layout_constraintTop_toTopOf="@+id/et_offer_rule_data"
         app:layout_constraintTop_toBottomOf="@+id/tv_offer_title"
-        android:text="Rule:" />
+        app:layout_constraintTop_toTopOf="@+id/et_offer_rule_data" />
 
     <EditText
         android:id="@+id/et_offer_rule_data"
@@ -129,7 +166,7 @@
         app:layout_constraintEnd_toStartOf="@+id/end"
         app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toEndOf="@+id/tv_offer_rule"
-        app:layout_constraintTop_toBottomOf="@+id/et_offer_organization_data" />
+        app:layout_constraintTop_toBottomOf="@+id/s_employee" />
 
 
     <TextView
@@ -138,14 +175,14 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_marginStart="8dp"
+        android:text="Salary:"
         android:textAllCaps="false"
         android:textColor="@color/purple_700"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/et_offer_salary_data"
         app:layout_constraintStart_toStartOf="@+id/start"
-        app:layout_constraintTop_toTopOf="@+id/et_offer_salary_data"
         app:layout_constraintTop_toBottomOf="@+id/tv_offer_title"
-        android:text="Salary:" />
+        app:layout_constraintTop_toTopOf="@+id/et_offer_salary_data" />
 
     <EditText
         android:id="@+id/et_offer_salary_data"
@@ -168,14 +205,14 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_marginStart="8dp"
+        android:text="Bonus:"
         android:textAllCaps="false"
         android:textColor="@color/purple_700"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/et_offer_bonus_data"
         app:layout_constraintStart_toStartOf="@+id/start"
-        app:layout_constraintTop_toBottomOf="@+id/et_offer_salary_data"
 
-        android:text="Bonus:" />
+        app:layout_constraintTop_toBottomOf="@+id/et_offer_salary_data" />
 
     <EditText
         android:id="@+id/et_offer_bonus_data"
@@ -198,14 +235,14 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_marginStart="8dp"
+        android:text="Benefit:"
         android:textAllCaps="false"
         android:textColor="@color/purple_700"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/et_offer_benefit_data"
         app:layout_constraintStart_toStartOf="@+id/start"
-        app:layout_constraintTop_toBottomOf="@+id/et_offer_bonus_data"
 
-        android:text="Benefit:" />
+        app:layout_constraintTop_toBottomOf="@+id/et_offer_bonus_data" />
 
     <EditText
         android:id="@+id/et_offer_benefit_data"
@@ -214,11 +251,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:ellipsize="end"
-        android:imeOptions="actionNext"
-        android:textAllCaps="false"
-        android:textSize="20sp"
+        android:imeOptions="actionDone"
         android:lines="5"
         android:scrollbars="vertical"
+        android:textAllCaps="false"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/end"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/tv_offer_bonus"
@@ -234,5 +271,7 @@
         app:layout_constraintEnd_toStartOf="@+id/end"
         app:layout_constraintStart_toStartOf="@+id/start"
         app:layout_constraintTop_toBottomOf="@+id/et_offer_benefit_data" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
